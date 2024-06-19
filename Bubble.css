@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(137, 221, 137);
+}
+
+#panel{
+    overflow: hidden; /* when we added top panel, the curves have disappear at the top. To avoid that we use this */
+    width: 80%;
+    height: 80%;
+    border-radius: 10px; /* For curved corners */
+    background-color: whitesmoke;
+}
+
+#ptop{
+    padding: 0px 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(85, 133, 85);
+}
+
+.box{
+    color: rgb(0, 0, 0);
+    font-weight: 700; /* This makes the font thicker */
+    font-size: 22px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.elem{
+    display: flex;
+    align-items: center; /* This and the next line both place the word Score at the center of the box, on the outside*/
+    gap: 20px;
+}
+
+.elem h2{
+    font-weight: 500;
+    font-size: 22px;
+}
+
+#pbtm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* This is used to send the bubbles to the next line in case there are multiple bubbles */
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 100px); /* This provides us to work with the white area which is 100% - 100px (ptop height) */
+}
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(85, 133, 85);
+    color: whitesmoke;
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+.bubble:hover{
+    cursor: pointer; /* When we hover or go over the bubble element, it darkens and cursor changes to a pointer*/
+    background-color: rgb(50, 75, 50); 
+}
